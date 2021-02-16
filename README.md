@@ -1,1 +1,1 @@
-Readme.md
+React Native application for myself bcs i like to forget about things lmaoooooooooo btw i use twitter for android
