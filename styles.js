@@ -49,5 +49,8 @@ export const Styles = StyleSheet.create({
     },
     box: {
         width: box_height
+    },
+    imageWrapper: {
+        
     }
 })

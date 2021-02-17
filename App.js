@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { Styles } from './styles';
 import {
   View,
@@ -36,9 +37,11 @@ const App = () => {
               <Text style={Styles.time}>{item.days[0]} {item.days[1]}</Text>
             </View>
             <View style={Styles.itemContainer}>
-              <Image
-                  source={item.img}
-                  style={Styles.image}/>
+              <View style={Styles.imageWrapper}>
+                <Image
+                    source={item.img}
+                    style={Styles.image}/>
+              </View>
             </View>
           </View>
           <View style={Styles.line}/>
