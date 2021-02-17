@@ -9,6 +9,8 @@ import {
   Dimensions
 } from 'react-native';
 
+import Header from './components/header/header';
+
 const App = () => {
 
   const [data, setData ] = useState([
@@ -24,13 +26,14 @@ const App = () => {
 
   return (
     <>
+      <Header/>
       <View style={Styles.container}>
       <FlatList
         keyExtractor={(item) => item.id}
         data={data}
         renderItem={({item})=> (
           <>
-          <View style={Styles.containerFlex}>
+            <View style={Styles.containerFlex}>
             <View style={[Styles.box, Styles.itemContainer]}>
               <Text style={Styles.title}>{item.title}</Text>
               <Text style={Styles.desc}>{item.description}</Text>
