@@ -12,14 +12,14 @@ import {
 const App = () => {
 
   const [data, setData ] = useState([
-    {id: '1', img: require('../AwesomeProject/images/1.jpg'), title: "Dont stop me now", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '2', img: require('../AwesomeProject/images/2.jpg'), title: "Ayy nibba", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '3', img: require('../AwesomeProject/images/1.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '4', img: require('../AwesomeProject/images/2.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '5', img: require('../AwesomeProject/images/1.jpg'), title: "Dont stop me now", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '6', img: require('../AwesomeProject/images/2.jpg'), title: "Ayy nibba", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '7', img: require('../AwesomeProject/images/1.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
-    {id: '8', img: require('../AwesomeProject/images/2.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]}
+    {id: '1', img: require('./images/1.jpg'), title: "Dont stop me now", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '2', img: require('./images/2.jpg'), title: "Ayy nibba", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '3', img: require('./images/1.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '4', img: require('./images/2.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '5', img: require('./images/1.jpg'), title: "Dont stop me now", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '6', img: require('./images/2.jpg'), title: "Ayy nibba", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '7', img: require('./images/1.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
+    {id: '8', img: require('./images/2.jpg'), title: "I wanna die", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]}
   ]) ;
 
   return (
