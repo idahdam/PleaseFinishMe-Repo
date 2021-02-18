@@ -52,5 +52,18 @@ export const Styles = StyleSheet.create({
     },
     imageWrapper: {
         
+    },
+    addMoreContainer: {
+        width: "100%",
+        height: 56,
+    }, 
+    addMoreButton: {
+        backgroundColor: 'black',
+        textAlign: 'center',
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        paddingTop: 18,
+        paddingBottom: 18
     }
 })

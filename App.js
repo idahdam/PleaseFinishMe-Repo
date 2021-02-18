@@ -6,12 +6,21 @@ import {
   Text,
   FlatList,
   Image,
-  Dimensions
+  TouchableOpacity,
+  ToastAndroid 
 } from 'react-native';
 
 import Header from './components/header/header';
 
 const App = () => {
+
+  const notifyMessage = (msg) => {
+    if (Platform.OS === 'android') {
+      ToastAndroid.show(msg, ToastAndroid.SHORT)
+    } else {
+      AlertIOS.alert(msg);
+    }
+  }
 
   const [data, setData ] = useState([
     {id: '1', img: require('./images/1.jpg'), title: "Dont stop me now", description: "Tonight, I'm gonna have myself...", days: ["Monday", "Wednesday"]},
@@ -28,31 +37,42 @@ const App = () => {
     <>
       <Header/>
       <View style={Styles.container}>
-      <FlatList
-        keyExtractor={(item) => item.id}
-        data={data}
-        renderItem={({item})=> (
-          <>
+        <FlatList
+          keyExtractor={(item) => item.id}
+          data={data}
+          renderItem={({item})=> (
+            <>
             <View style={Styles.containerFlex}>
-            <View style={[Styles.box, Styles.itemContainer]}>
-              <Text style={Styles.title}>{item.title}</Text>
-              <Text style={Styles.desc}>{item.description}</Text>
-              <Text style={Styles.time}>{item.days[0]} {item.days[1]}</Text>
-            </View>
-            <View style={Styles.itemContainer}>
-              <View style={Styles.imageWrapper}>
-                <Image
-                    source={item.img}
-                    style={Styles.image}/>
+              <View style={[Styles.box, Styles.itemContainer]}>
+              <TouchableOpacity>
+                <Text style={Styles.title}>{item.title}</Text>
+                <Text style={Styles.desc}>{item.description}</Text>
+                <Text style={Styles.time}>{item.days[0]} {item.days[1]}</Text>
+              </TouchableOpacity>
               </View>
+              <TouchableOpacity>
+              <View style={Styles.itemContainer}>
+                <View style={Styles.imageWrapper}>
+                  <Image
+                      source={item.img}
+                      style={Styles.image}/>
+                </View>
+              </View>
+              </TouchableOpacity>
             </View>
-          </View>
-          <View style={Styles.line}/>
-          </>
-        )}
-      >
-      </FlatList>
+            <View style={Styles.line}/>
+            </>
+          )}
+        >
+        </FlatList>
       </View>
+      <TouchableOpacity>
+        <View 
+          style={Styles.addMoreContainer}
+          onPress={() => {notifyMessage("FUCK")}}>
+            <Text style={Styles.addMoreButton}>Add More Activities...</Text>
+        </View>
+      </TouchableOpacity>
     </>
   );
 };
